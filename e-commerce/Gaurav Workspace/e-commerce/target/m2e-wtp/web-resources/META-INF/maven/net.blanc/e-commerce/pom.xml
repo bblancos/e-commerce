@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>e-commerce</finalName>
+    <finalName>ecommerce</finalName>
   </build>
 </project>

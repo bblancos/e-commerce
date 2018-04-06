@@ -43,7 +43,7 @@
 		
 	</dependencies>
 	<build>
-		<finalName>e-commerce</finalName>
+		<finalName>ecommerce</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
