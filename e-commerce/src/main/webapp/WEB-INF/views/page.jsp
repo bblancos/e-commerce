@@ -20,14 +20,18 @@
 
     <title>E-Commerce - ${title}</title>
     <script>
-    	window.menu ="${title}";
+    	window.menu ='${title}';
+    	window.contextRoot='${contextRoot}';
     </script>
 
     <!-- Bootstrap core CSS -->
     <link href="${css }/bootstrap.css" rel="stylesheet">
     
      <!-- Bootstrap core CSS -->
-    <link href="${css }/bootstrap-3-theme.css" rel="stylesheet">
+    <link href="${css }/bootstrap-flat-theme.css" rel="stylesheet">
+
+	 <!-- Bootstrap Datatable CSS -->
+    <link href="${css }/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <link href="${css }/myapp.css" rel="stylesheet">
@@ -59,6 +63,21 @@
 				<c:if test= "${userClickContact == true}">
 				 	<%@include file="contact.jsp" %>
 				</c:if>
+				
+				<!-- category products Section -->
+				<c:if test= "${userClickAllProducts == true or userClickCategoryProducts == true}">
+				 	<%@include file="listProducts.jsp" %>
+				</c:if>
+				
+				<!-- Load Only when user clicks Show Product-->
+				<c:if test= "${userClickShowProduct == true}">
+				 	<%@include file="singleProduct.jsp" %>
+				</c:if>
+				
+				<!-- Load Only when user clicks MANAGE PRODUCTS-->
+				<c:if test= "${userClickManageProduct == true}">
+				 	<%@include file="manageProducts.jsp" %>
+				</c:if>
 			
 			</div>
 	
@@ -66,14 +85,27 @@
 	    <!-- Footer Comes ZHere -->
 	    <%@include file="./shared/footer.jsp" %>
 	
-	    <!-- JavaScript -->
+	    <!-- Jquery -->
 	    <script src="${js}/jquery.js"></script>
+	    
+	     <!-- Jquery validator -->
+	    <script src="${js}//jquery.validate.js"></script>
+	    
 	    <script src="${js}/bootstrap.min.js"></script>
+	    
+	    <!-- DataTable Plugin -->
+	    <script src="${js}/jquery.dataTables.js"></script>
 	
-		<!-- Self Coded Javascript -->
+		<!-- DataTable Plugin -->
+	    <script src="${js}/dataTables.bootstrap.js"></script>
+	
+		<!-- Bootbox -->
+	    <script src="${js}/bootbox.min.js"></script>
+	
+		<!-- Self Coded Javascript --> 
 		<script src="${js}/myapp.js"></script>
 		
-	</div>
+	</div> 
 	
 </body>
 

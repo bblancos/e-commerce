@@ -14,6 +14,12 @@
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
 
+		<dependency>			
+			<!-- Linking backend dependency -->
+			<groupId>net.blanc</groupId>
+			<artifactId>back-e_commerce</artifactId>
+			<version>0.0.1-SNAPSHOT</version>	
+		</dependency>		
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
@@ -23,15 +29,40 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+		<dependency>
+   			<groupId>org.springframework</groupId>
+    		<artifactId>spring-core</artifactId>
+   			 <version>${spring.version}</version>
+   			 <exclusions>
+   			 
+   			 	<exclusion>
+   			 		
+   			 		<groupId>commons-logging</groupId>
+    				<artifactId>commons-logging</artifactId> 
+   			 
+   			 	</exclusion>
+   			 	   			 	
+   			 	  			 	
+   			   			 
+   			 </exclusions>
+		</dependency>
+		
+		<dependency>
+   			 <groupId>org.springframework</groupId>
+    		<artifactId>spring-webmvc</artifactId>
+   			 <version>${spring.version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
 <dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-webmvc</artifactId>
-    <version>${spring.version}</version>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <version>1.4.196</version>
 </dependency>
 
 		<!-- JSTL -->
